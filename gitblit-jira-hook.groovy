@@ -67,7 +67,7 @@ for (command in commands) {
       def revUrl = "$gitwebUrl/commit/$repoName/$commitRev"
       String commitMessageWithLink = "*git commit* in: ${updatedRef} \n"+
         "[$repoName $commitRev|$revUrl]\n"+
-        "*message*: " + commitMessage.minus(match[0][0])
+        "*message*: " + commitMessage
 
       OAuthRsaSha1Signer rsaSigner = new OAuthRsaSha1Signer();
       rsaSigner.setPrivateKey(RsaSha1PrivateKeyHelper.getPrivateKeyFromFilename(privKeyFile));
