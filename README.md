@@ -1,4 +1,2 @@
-gitblit-jira-hook
-=================
-
-GitBlit integration to JIRA commit hook
+GitBlit - Jira integration commit hook
+======================================
