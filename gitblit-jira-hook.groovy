@@ -48,6 +48,7 @@ Repository repo = gitblit.getRepository(repository.name)
 def jiraUrl = "http://localhost:5000"
 def consumerKey = "gitblit"
 def jiraRepoRegex = "\\b([A-Z]+)-(\\d+)\\b"
+def jiraCloseIssueRegex = "(resolve[sd]?|fix(es|ed)?|close[sd]?)\\s+([A-Z]+)-([0-9]+)"
 def gitwebUrl = "http://localhost:8080/gitblit"
 def privKeyFile = "/srv/gitblit/data/rsa.pem"
 
