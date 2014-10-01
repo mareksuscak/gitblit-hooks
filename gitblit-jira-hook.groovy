@@ -47,7 +47,7 @@ for (command in commands) {
       def escapedRepoName = repoName.replaceAll(~"(/)") { "!" }
       def updatedRef = command.refName
       def commitRev = commit.getId().getName()
-      def revUrl = "$gitwebUrl/commit/$repoName/$commitRev"
+      def revUrl = "$gitwebUrl/commit/$escapedRepoName/$commitRev"
       String commitMessageWithLink = "*git commit* in: ${updatedRef} \n"+
         "[$repoName $commitRev|$revUrl]\n"+
         "*message*: " + commitMessage
