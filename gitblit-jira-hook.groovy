@@ -44,6 +44,7 @@ for (command in commands) {
       def issueNo = match[0][2]
       def issueUrl = "/rest/api/2/issue/$project-$issueNo/comment"
       def repoName = repository.name
+      def escapedRepoName = repoName.replaceAll(~"(/)") { "!" }
       def updatedRef = command.refName
       def commitRev = commit.getId().getName()
       def revUrl = "$gitwebUrl/commit/$repoName/$commitRev"
