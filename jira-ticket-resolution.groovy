@@ -31,7 +31,7 @@ def jiraUrl = "http://localhost:5000"
 def jiraResolutionRegex = ~/(?i)\b(resolve[sd]?|fix(es|ed)?|close[sd]?)\s+([A-Z]+)-([0-9]+)\b/
 def jiraServiceUserName = "gitblit"
 def jiraServiceUserPassword = "gitblit"
-def closeTransitionName = "Closed"
+def closeTransitionId = 871
 def fixedResolutionName = "Fixed"
 
 for (command in commands) {
@@ -51,7 +51,7 @@ for (command in commands) {
             try {
                 def resp = restClient.post(
                         path : issueUrl,
-                        body : [transition:[name:closeTransitionName], fields:[resolution:[name:fixedResolutionName]]],
+                        body : [transition:[id:closeTransitionId], fields:[resolution:[name:fixedResolutionName]]],
                         requestContentType : ContentType.JSON )
 
                 assert resp.status == 204
