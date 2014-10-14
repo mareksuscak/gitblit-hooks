@@ -23,7 +23,7 @@ Setup:
 
 */
 
-logger.info("jira comment hook triggered by ${user.username} for ${repository.name}")
+logger.info("jira ticket resolution hook triggered by ${user.username} for ${repository.name}")
 
 Repository repo = gitblit.getRepository(repository.name)
 
