@@ -28,7 +28,7 @@ logger.info("jira comment hook triggered by ${user.username} for ${repository.na
 Repository repo = gitblit.getRepository(repository.name)
 
 def jiraUrl = "http://localhost:5000"
-def jiraRepoRegex = "\\b([A-Z]+)-(\\d+)\\b"
+def jiraRepoRegex = ~/\b([A-Z]+)-(\d+)\b/
 def jiraServiceUserName = "gitblit"
 def jiraServiceUserPassword = "gitblit"
 def gitwebUrl = "http://localhost:8080/gitblit"
