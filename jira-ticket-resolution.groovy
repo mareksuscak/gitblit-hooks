@@ -21,6 +21,12 @@ Setup:
 
 2. Set parameters in hook according to your environment
 
+IMPORTANT NOTE:
+
+If you use different Jira workflows for different projects you would need to create a copy of this script
+for each of those workflows because each workflow has different transitions and this script cannot decide
+which one to choose.
+
 */
 
 logger.info("jira ticket resolution hook triggered by ${user.username} for ${repository.name}")
